@@ -4,7 +4,16 @@ import React, { useState, useEffect } from 'react';
 // CONSTANTS & CONFIGURATION
 // ============================================================================
 
-const REPLICATE_API_KEY = 'r8_2LS2Z4XfOxWDXyqHKEfUvqU7aQXvKKdHMKSXl';
+// Use environment variable from Vercel, with fallback to empty string
+const REPLICATE_API_KEY = (typeof window !== 'undefined' && (window as any).REPLICATE_API_TOKEN) || 
+                          process.env.REACT_APP_REPLICATE_API_KEY || 
+                          process.env.REPLICATE_API_TOKEN || 
+                          '';
+
+// Log for debugging (remove in production)
+if (!REPLICATE_API_KEY) {
+  console.warn('⚠️ REPLICATE_API_KEY not found. Please set REPLICATE_API_TOKEN or REACT_APP_REPLICATE_API_KEY environment variable.');
+}
 const ADMIN_EMAIL = 'jawadjan1t@gmail.com';
 const DAILY_CREDITS = 100;
 const VIDEO_COST = 10;
