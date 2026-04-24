@@ -4,15 +4,15 @@ import React, { useState, useEffect } from 'react';
 // CONSTANTS & CONFIGURATION
 // ============================================================================
 
-// Use environment variable from Vercel, with fallback to empty string
-const REPLICATE_API_KEY = (typeof window !== 'undefined' && (window as any).REPLICATE_API_TOKEN) || 
-                          process.env.REACT_APP_REPLICATE_API_KEY || 
-                          process.env.REPLICATE_API_TOKEN || 
-                          '';
+// Use environment variable from Vercel
+// For React apps, Vercel exposes env vars with REACT_APP_ prefix
+const REPLICATE_API_KEY = process.env.REACT_APP_REPLICATE_API_KEY || '';
 
-// Log for debugging (remove in production)
+// Log for debugging
 if (!REPLICATE_API_KEY) {
-  console.warn('⚠️ REPLICATE_API_KEY not found. Please set REPLICATE_API_TOKEN or REACT_APP_REPLICATE_API_KEY environment variable.');
+  console.error('❌ ERROR: REPLICATE_API_KEY is not set. Please add REACT_APP_REPLICATE_API_KEY to Vercel environment variables.');
+} else {
+  console.log('✅ REPLICATE_API_KEY loaded successfully');
 }
 const ADMIN_EMAIL = 'jawadjan1t@gmail.com';
 const DAILY_CREDITS = 100;
