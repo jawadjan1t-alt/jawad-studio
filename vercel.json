@@ -2,18 +2,18 @@
   "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "routes": [
+  "public": true,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
-  "env": {
-    "NODE_ENV": "production"
-  },
   "headers": [
     {
-      "source": "/dist/(.*)",
+      "source": "/bundle.js",
       "headers": [
         {
           "key": "Cache-Control",
@@ -27,6 +27,10 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
         }
       ]
     }
