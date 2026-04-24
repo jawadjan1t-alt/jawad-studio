@@ -8,8 +8,8 @@ const REPLICATE_API_KEY = 'r8_2LS2Z4XfOxWDXyqHKEfUvqU7aQXvKKdHMKSXl';
 const ADMIN_EMAIL = 'jawadjan1t@gmail.com';
 const DAILY_CREDITS = 100;
 const VIDEO_COST = 10;
-const STORAGE_KEY = 'jawad_group_state';
-const APP_NAME = 'Jawad Group';
+const STORAGE_KEY = 'jawad_studio_state';
+const APP_NAME = 'Jawad Studio';
 
 // ============================================================================
 // TYPES
@@ -49,7 +49,7 @@ const REVIEWS: Review[] = [
     name: 'Sarah Chen',
     avatar: '👩‍💼',
     rating: 5,
-    text: 'Jawad Group transformed my content creation workflow. The AI quality is absolutely stunning!',
+    text: 'Jawad Studio transformed my content creation workflow. The AI quality is absolutely stunning!',
   },
   {
     id: '2',
@@ -70,14 +70,14 @@ const REVIEWS: Review[] = [
     name: 'David Kim',
     avatar: '👨‍💻',
     rating: 5,
-    text: 'Perfect balance of power and simplicity. Jawad Group is a game-changer.',
+    text: 'Perfect balance of power and simplicity. Jawad Studio is a game-changer',
   },
   {
     id: '5',
     name: 'Priya Patel',
     avatar: '👩‍🎬',
     rating: 5,
-    text: 'The design is sleek, the performance is excellent, and the results are incredible.',
+    text: 'The design is sleek, the performance is excellent, and the results are incredible.'
   },
 ];
 

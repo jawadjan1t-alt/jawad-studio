@@ -1,7 +1,7 @@
 {
-  "name": "jawad-group-web",
+  "name": "jawad-studio-web",
   "version": "2.0.0",
-  "description": "Jawad Group - AI Creative Studio",
+  "description": "Jawad Studio - AI Creative Studio",
   "main": "dist/bundle.js",
   "homepage": ".",
   "scripts": {
@@ -21,7 +21,7 @@
     "replicate",
     "studio"
   ],
-  "author": "Jawad Group",
+  "author": "Jawad Studio",
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^10.5.0",
